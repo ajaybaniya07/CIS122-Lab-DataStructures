@@ -8,3 +8,5 @@ NorthwindC/.vs/NorthwindC/v17/.suo
 *.csproj
 *.cache
 NorthwindC/NorthwindC/Properties/AssemblyInfo.cs
+*.sqlite
+NorthwindC/NorthwindC/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
