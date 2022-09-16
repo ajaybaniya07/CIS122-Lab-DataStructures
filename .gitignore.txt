@@ -1,0 +1,14 @@
+#Ignore everything that isn't useful in our project folder
+NorthWindC/bin/
+NorthWindC/obj/
+NorthWindC/properties/
+.vs/
+
+# Ignore config files
+*.config
+
+#Ignore suo files
+*.suo
+
+# Ignore solution files 
+*.sln
