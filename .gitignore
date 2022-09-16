@@ -1,0 +1,10 @@
+
+*.vsidx
+*.lock
+NorthwindC/.vs/NorthwindC/v17/.suo
+*.sln
+*.zip
+*.config
+*.csproj
+*.cache
+NorthwindC/NorthwindC/Properties/AssemblyInfo.cs
