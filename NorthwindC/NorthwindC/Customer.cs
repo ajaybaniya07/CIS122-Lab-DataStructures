@@ -4,6 +4,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +24,8 @@ namespace NorthwindC
         private string phone = "n/a";
         private string fax = "n/a";
 
+
+    
 
 
         //gets and sets
@@ -85,6 +88,35 @@ namespace NorthwindC
             set { fax = value; }
         }
 
+
+        public Customer() : this("n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a")
+        {
+            //empty constructor
+        }
+
+        public Customer(string aCustomerID, string aContactTitle, string aPhone,
+        string aFax) : this(aCustomerID, "n/a", "n/a", aContactTitle, "n/a", "n/a", "n/a", "n/a", "n/a", aPhone, "n/a")
+        {
+            //partial constructor
+        }
+
+        public Customer(string aCustomerID, string aCompanyName, string aContactName, string aContactTitle,
+        string aAddress, string aCity, string aRegion, string aPostalCode, string aCountry, string aPhone,
+        string aFax)
+        {
+            this.customerID = aCustomerID;
+            this.companyName = aCompanyName;
+            this.contactName = aContactName;
+            this.contactTitle = aContactTitle;
+            this.address = aAddress;
+            this.city = aCity;
+            this.region = aRegion;
+            this.postalCode = aPostalCode;
+            this.country = aCountry;
+            this.phone = aPhone;
+            this.fax = aFax;
+
+        }
 
         //toString methods
         public override string ToString()

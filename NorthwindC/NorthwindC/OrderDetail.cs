@@ -14,9 +14,12 @@ namespace NorthwindC
         // variables
         private int orderId = -1;
         private int productId = -1;
-        private double unitPrice = -1;
-        private int quqntity = 0;
+        private int unitPrice = -1;
+        private int quantity = 0;
         private double discount = 0.0;
+
+        
+
 
         //gets and sets
         public int OrderId
@@ -106,6 +109,26 @@ namespace NorthwindC
             }
 
 
+        }
+
+        public OrderDetail() : this(-1, -1, -1, 0, 0.0)
+        {
+            //empty constructor
+        }
+
+        public OrderDetail(int aOrderId, int aQuanitiy) : this(aOrderId, -1, -1, aQuanitiy, 0.0)
+        {
+            //partial constructor 
+        }
+
+        public OrderDetail(int aOrderId, int aProductId, int aUnitPrice, int aQuantity, double aDiscount)
+        {
+            //full constructor
+            this.OrderId = aOrderId;
+            this.ProductId = aProductId;
+            this.UnitPrice = aUnitPrice;
+            this.Quantity = aQuantity;
+            this.Discount = aDiscount;
         }
 
         //TOSting methods

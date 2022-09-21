@@ -47,6 +47,30 @@ namespace NorthwindC
             set { phone = value; }
         }
 
+        //Empty Constructor
+        public Shipper() : this(-1, "n/a", "n/a")
+        {
+
+        }
+
+        //Partial Constructor
+        public Shipper(int aShipperId) : this(aShipperId, "n/a", "n/a")
+        {
+
+        }
+
+
+
+        //Constructor
+        public Shipper(int aShipperId, string aCompanyName, string aPhone)
+        {
+            this.ShipperId = aShipperId;
+            this.CompanyName = aCompanyName;
+            this.Phone = aPhone;
+
+        }
+
+
         public override string ToString() //ToString methods
         {
             string message = " ";

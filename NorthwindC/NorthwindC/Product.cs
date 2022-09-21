@@ -16,15 +16,15 @@ namespace NorthwindC
         public string productName = "n/a";
         public int supplierId = -1;
         public int categoryId = -1;
-        public string qualityPerUnit = "n/a";
+        public string quantityPerUnit = "n/a";
         public double unitPrice = 0.0;
         public int unitInStock = -1;
         public int unitInOrder = -1;
         public int reorderLevel = -1;
-        public discontinued = true;
+        public discontinued = false;
 
 
-        // gets and sets
+        // gets and set
         public int ProductId
         {
             get { return this.productId; }
@@ -46,6 +46,12 @@ namespace NorthwindC
         {
             get { return this.productName; }
             set { productName = value; }
+        }
+
+        public string QuantityPerUnit
+        {
+            get { return this.quantityPerUnit; }
+            set { quantityPerUnit = value; }
         }
 
         public int SupplierId
@@ -112,6 +118,21 @@ namespace NorthwindC
             }
         }
 
+        public int UniteInOrder
+        {
+            get { return this.unitInOrder; }
+            set
+            {
+                if (value > -1)
+                {
+                    this.unitInOrder = value;
+                }
+                else
+                {
+                    this.unitInOrder = 0;
+                }
+            }
+        }
         public int ReorderLevel
         {
             get { return this.reorderLevel; }
@@ -131,18 +152,38 @@ namespace NorthwindC
         public int Discontinued
         {
             get { return this.discontinued; }
-            set
-            {
-                if (value > true)
-                {
-                    this.discontinued = value;
-                }
-                else
-                {
-                    this.discontinued = 0;
-                }
-            }
+            set { this.discontinued = value; }
+            
         }
+
+        public Product(): this(-1,"n/a" ,-1,-1,"n/a",0.0,-1,-1,9999,true)
+        {
+            //This is an empty constructor
+        }
+
+
+        public Product(int aProductID, string aProductName) : this(aProductID, aProductName,-1,-1,"n/a",0.0,-1,-1,9999,true)
+        {
+            //Partial Constructor
+        }
+
+        public Product(int aProductID, string aProductName, int aSupplierId, int aCategoryId, 
+        string aQuantityPerUnit, double aUnitPrice, int aUnitsInStock, int aUnitInOrder, 
+        int aReorderLevel, int aDiscontinued)
+        {
+            this.ProductId = aProductID;
+            this.ProductName = aProductName;
+            this.SupplierId = aSupplierId;
+            this.CategoryId = aCategoryId;
+            this.QuantityPerUnit = aQuantityPerUnit;
+            this.UnitPrice = aUnitPrice;
+            this.UnitInStock = aUnitsInStock;
+            this.UnitInOrder = aUnitInOrder;
+            this.ReorderLevel = aReorderLevel;
+            this.Discontinued = aDiscontinued;
+        }
+
+
 
 
         // tostring methods

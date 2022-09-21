@@ -29,6 +29,9 @@ namespace NorthwindC
         private string notes = "n/a";
         private int reportsTo = -1;
 
+
+
+
         //gets and sets
         public int EmployeeId
         {
@@ -151,6 +154,46 @@ namespace NorthwindC
             }
 
         }
+
+
+        public Employee():this (-1,"n/a","n/a","n/a", "n/a", "n/a","n/a", "n/a", "n/a","n/a", "n/a", 
+        "n/a","n/a","n/a", "n/a", -1)
+        {
+            // empty constructor
+        }
+
+        public Employee(int aEmployeeId,string aFirstName) : this(aEmployeeId, "n/a", aFirstName , "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a",
+        "n/a", "n/a", "n/a", "n/a", -1)
+        {
+            // partial constructor
+        }
+
+
+        // full constructor
+        public Employee(int aEmployeeId, string aLastName, string aFirstName, string aTitle, 
+        string aTitleOfCourtesy, string aBirthDate, string aHireDate,
+        string aAddress, string aCity, string aRegion, string aPostalCode, string aCountry, 
+        string aHomePhone, string aExtension, string aNotes, int aReportsTo)
+        {
+            this.EmployeeId = aEmployeeId;
+            this.LastName = aLastName;
+            this.FirstName = aFirstName;
+            this.Title = aTitle;
+            this.TitleOfCourtesy = aTitleOfCourtesy;
+            this.BirthDate = aBirthDate;
+            this.HireDate = aHireDate;
+            this.Address = aAddress;
+            this.City = aCity;
+            this.Region = aRegion;
+            this.PostalCode = aPostalCode;
+            this.Country = aCountry;
+            this.HomePhone = aHomePhone;
+            this.Extension = aExtension;
+            this.Notes = aNotes;
+            this.ReportsTo = aReportsTo;
+
+        }
+
         public override string ToString()  // To srting methods
         {
             string message = " ";

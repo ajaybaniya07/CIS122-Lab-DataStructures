@@ -114,6 +114,42 @@ namespace NorthwindC
             set { homePage = value; }
         }
 
+        public Supplier() : this(-1, "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a")
+        {
+            //Empty constructors
+        }
+
+
+
+
+        public Supplier(int aSupplierId, string aCompanyName, string aContactName) : this(aSupplierId, 
+        aCompanyName, aContactName, "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a")
+        {
+            //Partial Constructor
+        }
+
+
+
+
+        //Constructor
+        public Supplier(int aSupplierId, string aCompanyName, string aContactName, string aContactTitle, 
+        string aAddress, string aCity, string aRegion, string aPostalCode, string aCountry,
+        string aPhone, string aFax, string aHomepage)
+        {
+            this.SupplierId = aSupplierId;
+            this.CompanyName = aCompanyName;
+            this.ContactName = aContactName;
+            this.ContactTitle = aContactTitle;
+            this.Address = aAddress;
+            this.City = aCity;
+            this.Region = aRegion;
+            this.PostalCode = aPostalCode;
+            this.Country = aCountry;
+            this.Phone = aPhone;
+            this.Fax = aFax;
+            this.Homepage = aHomepage;
+        }
+
 
         public override string ToString() //ToString methods
         {

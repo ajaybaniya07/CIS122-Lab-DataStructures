@@ -23,10 +23,49 @@ namespace NorthwindC
         private double freight = 0.0;
         private string shipName = "n/a";
         private string shipAddress = "n/a";
-        private string sshipCity = "n/a";
+        private string shipCity = "n/a";
         private string shipRegion = "n/a";
         private string shipPostalCode = "n/a";
         private string shipCountry = "n/a";
+
+
+        public Order() : this(-1, "n/a", -1, -1, -1, -1, -1, 0.0, "n/a", "n/a", "n/a", "n/a", "n/a", "n/a")
+        {
+            //empty constructor
+        }
+
+        public Order(string aShipName, string aShipAdress) : this(-1, "n/a", -1, -1, -1, -1, -1, 0.0, aShipName, aShipAdress, "n/a", "n/a", "n/a", "n/a")
+        {
+            //partial constructor
+        }
+
+
+      // full constructor
+
+        public Order(int aOrderId, string aCustomerId, int aEmployedId, date aOderDate, 
+        date aRequiredDate, date aShippedDate, int aShipVia, double aFreight, string aShipName, 
+        string aShipAddress, string aShipCity, string aShipRegion, string aShipPostalCode, 
+        string aShipCountry, )
+        {
+            this.OrderId = aOrderId;
+            this.CustomerId = aCustomerId;
+            this.EmployedId = aEmployedId;
+            this.OderDate = aOderDate;     
+            this.RequiredDate = aRequiredDate;
+            this.ShippedDate = aShippedDate;
+            this.ShipVia = aShipVia;
+            this.Freight = aFreight;
+            this.ShipName = aShipName;
+            this.ShipAddress = aShipAddress;
+            this.ShipCity = aShipCity;
+           this. ShipRegion = aShipRegion;
+           this. ShipPostalCode = aShipPostalCode;
+            this.ShipCountry = aShipCountry;
+           
+        }
+
+
+
 
 
 

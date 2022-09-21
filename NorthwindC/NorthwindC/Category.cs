@@ -17,6 +17,8 @@ namespace NorthwindC
         private string description = "n/a";
 
 
+
+       
         // accessores and mutators (gets and sets)
         public int CategoryId
         {
@@ -48,6 +50,24 @@ namespace NorthwindC
             set { this.description = value; }
         }
 
+        public Category() : this(-1, "n/a", "n/a")
+        {
+            //empty constructor
+
+        }
+        public Category(int aCategoryId, string aDescription) : this(aCategoryId, "n/a", aDescription)
+        {
+            //partial comstructor
+
+        }
+        public Category(int aCategoryId, string aCategoryName, string aDescription)
+        {
+            this.categoryId = aCategoryId;
+            this.categoryName = aCategoryName;
+            this.description = aDescription;
+            //full constructor
+
+        }
 
         public override string ToString() // ToString methods
         {
